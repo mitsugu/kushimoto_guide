@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# twitter: http://ogp.me/ns/twitter#">
+	<meta charset="UTF-8">
+	<title>ダイバーのための串本ガイド</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="canonical" href="https://mitsugu.github.io/kushimoto_guide/">
+
+	<meta name="title" content="ダイバーのための串本ガイド">
+	<meta name="description" content="ダイバーのための串本町ガイドブック">
+	<meta name="keywords" content="ガイドブック, 串本町, ダイビング, ダイバー">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ダイバーのための串本ガイド">
+	<meta property="og:description" content="ダイバーのための串本町ガイドブック">
+	<meta property="og:url" content="https://mitsugu.github.io/kushimoto_guide/">
+	<meta property="og:site_name" content="The road Orz passed by">
+	<!--
+  <meta property="og:image" content="https://i.imgur.com/jyZiVCY.jpg">
+  <meta property="og:image:width" content="340">
+  <meta property="og:image:height" content="512">
+  -->
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="https://mitsugu.github.io/kushimoto_guide/">
+
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<!--
+	<script defer src="toggle.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@nikolat/makibishi@0.3.3"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/nostr-zap@1.2.0"></script>
+	<script defer src="https://unpkg.com/@popperjs/core@2"></script>
+	<script defer src="https://unpkg.com/tippy.js@6"></script>
+	<script defer src="tippy.js"></script>
+	<link rel="stylesheet" href="tippy.css" />
+	-->
+
+	<link rel="stylesheet" href="autoslider.css" />
+	<script defer src="autoslider.js"></script>
+	<!--
+	<link rel="stylesheet" href="bubble.css" />
+	<link rel="stylesheet" href="image-unit.css" />
+	<script defer src="image-unit.js"></script>
+	<link rel="stylesheet" href="opal.css" />
+	<script defer src="opal.js"></script>
+	<link rel="stylesheet" href="slider.css" />
+	<script defer src="slider.js"></script>
+	-->
+	<link rel="stylesheet" href="tabmenu.css" />
+	<script defer src="tabmenu.js"></script>
+	<!--
+	<link rel="stylesheet" href="timeline.css" />
+	<script defer src="timeline.js"></script>
+	<link rel="stylesheet" href="wrappedmedia.css" />
+
+	<link rel="stylesheet" href="h5.css" />
+	<link rel="stylesheet" href="h6.css" />
+	<link rel="stylesheet" href="blockquote.css" />
+	-->
+	<style>
+		table.services,
+		table.services th,
+		table.services td {
+			border: 1px solid gray!important;
+		}
+		table.services {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top:3em;
+			margin-bottom:3em;
+		}
+		table.services th, table.services td {
+			padding: 8px;
+		}
+		table.services th {
+			background-color:darkgray;
+		}
+		table.services tr th:nth-child(1)
+		{
+			width:6em;
+		}
+		table.services tr th:nth-child(2)
+		{
+			width:8em;
+		}
+		table.services td {
+			text-align:center;
+		}
+		table.services tr td:nth-child(3),
+		table.services tr td:nth-child(4)
+		{
+			text-align: left;
+		}
+		table.services tr td:nth-child(3) {
+			width:14em;
+		}
+		iframe.map {
+			width:640px;
+			height:480px;
+		}
+		table.weather {
+		  border-collapse: collapse;
+		  border: 0px;
+		  width: 32%;
+			text-align:center;
+		}
+		table.weather tr:nth-child(1) td:nth-child(1) {
+			width: 96px;
+			text-align:center;
+			vertical-align:middle;
+		}
+		table.weather tr:nth-child(1) td:nth-child(2){
+			border: 0px;
+			width: auto;
+		}
+		/*
+		.table-container {
+		  display: flex;
+		  gap: 20px;
+		  align-items: flex-start;
+		}
+		*/
+
+		.my-table {
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		.my-table th, .my-table td {
+		  border: 1px solid #ccc;
+		  padding: 8px;
+		}
+		table.tide {
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		table.tide th,
+		table.tide td
+		{
+		  border: 1px solid #ccc;
+		  padding: 8px;
+		}
+		:root {
+			--border-color: #dcdcdc;
+			--bg-gray: #f4f4f4;
+			--bg-white: #ffffff;
+			--text-main: #333333;
+			--text-sub: #555555;
+			--icon-orange: #f28b30;
+			--icon-cyan: #20a0b2;
+			--badge-high: #fcebd5;
+			--badge-low: #e0f2f4;
+		}
+		.tide-table {
+			display: grid;
+			grid-template-columns: 80px 1fr;
+			border: 1px solid var(--border-color);
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			color: var(--text-main);
+			line-height: 1.5;
+			max-width: 700px; /* 必要に応じて調整してください */
+			margin: 1em;
+		}
+
+		/* 共通のセルスタイル */
+		.cell {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: 16px;
+		}
+		.bg-gray { background-color: var(--bg-gray); }
+		.bg-white { background-color: var(--bg-white); }
+		.border-b { border-bottom: 1px solid var(--border-color); }
+		.border-r { border-right: 1px solid var(--border-color); }
+
+		/* ----------------------------------
+			 上段の右側コンテンツ（さらに3カラムに分割）
+			 ---------------------------------- */
+		.top-row-content {
+			display: grid;
+			grid-template-columns: 1fr 80px 2.5fr;
+		}
+
+		/* ----------------------------------
+			 下段の右側コンテンツ（4カラムに分割）
+			 ---------------------------------- */
+		.bottom-row-content {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			padding: 24px 0;
+		}
+
+		.tide-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 12px; /* アイコン、時刻、バッジの間の余白 */
+		}
+
+		.tide-type {
+			font-size: 14px;
+			color: var(--text-sub);
+			display: flex;
+			align-items: center;
+			gap: 4px;
+		}
+
+		.icon-high { color: var(--icon-orange); font-weight: bold; }
+		.icon-low { color: var(--icon-cyan); font-weight: bold; }
+
+		.tide-time {
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+		.tide-badge {
+			font-size: 14px;
+			padding: 4px 16px;
+			border-radius: 4px;
+			min-width: 60px;
+			box-sizing: border-box;
+		}
+		.badge-high { background-color: var(--badge-high); }
+		.badge-low { background-color: var(--badge-low); }
+		table.time-series {
+		  border-collapse: collapse;
+			border: 1px solid #ccc;
+			width:80%;
+			text-align:center;
+			vertical-align:middle;
+		}
+		table.time-series th, table.time-series td {
+		  border: 1px solid #ccc;
+		  padding: 8px;
+		}
+		table.time-series th {
+			background-color: var(--bg-gray);
+		}
+	</style>
+</head>
+
+<body>
+<article>
+	<h1>ダイバーのための串本ガイド</h1>
+	<div class="tab-buttons">
+		<button class="tab-btn active" data-target="tab1">Top</button>
+		<button class="tab-btn" data-target="tab2">天気と海況</button>
+		<button class="tab-btn" data-target="tab3">アクセス</button>
+		<button class="tab-btn" data-target="tab4">町内移動手段</button>
+		<button class="tab-btn" data-target="tab5">ダイビングサービス</button>
+		<button class="tab-btn" data-target="tab6">食事</button>
+		<button class="tab-btn" data-target="tab7">買い物</button>
+		<button class="tab-btn" data-target="tab8">観光</button>
+	</div>
+	<div class="tab-contents">
+		<div id="tab1" class="tab-item active">
+			<h2>1 「ダイバーのための串本ガイド」とは</h2>
+			<figure>
+				<img src="fig01.webp" width="100%">
+			</figure>
+
+			<p>串本町でのダイビングを計画している方向けの個人制作ガイドです。</p>
+			<p>アクセス、町内の移動手段、ダイビングサービス、食事や買い物など、現地で困らないための実用情報をまとめています。</p>
+			<p>情報は個人調査によるものであり、最新情報は各事業者にご確認ください。</p>
+		</div>
+
+		<div id="tab2" class="tab-item">
+			<h2>2 串本の海況と天気</h2>
+			<p>串本の天気情報と海況の提供を試験的に続けてまいりましたが、試験運用により労力が個人能力を凌駕していることが判明いたしました。これからは以下のページを参考にされるようにお願い申し上げます。</p>
+			<ul>
+			<li><a href="https://wasuishi.sakura.ne.jp/" class="external" target="_blank">和歌山県水産試験場</a> : 黒潮の状況</li>
+			<li><a href="https://weather.yahoo.co.jp/weather/tide/30/KS/" class="external" target="_blank">串本の潮汐情報</a></li>
+			<li><a href="https://www.jma.go.jp/bosai/weather_map/" class="external" target="_blank">気象庁・天気図</a></li>
+			<li><a href="https://www.jma.go.jp/bosai/map.html#4/20.638/134.237/&elem=root&typhoon=all&contents=typhoon" class="external" target="_blank">気象庁・台風情報</a></li>
+			<!--
+			<li><a href="" class="external" target="_blank"></a></li>
+			<li><a href="" class="external" target="_blank"></a></li>
+			<li><a href="" class="external" target="_blank"></a></li>
+			-->
+			</ul>
+			<!--
+			<h3>2.1 潮汐</h3>
+			<div class="tide-table">
+				<div class="cell bg-gray border-b border-r">潮名</div>
+				<div class="top-row-content border-b bg-white">
+					<div class="cell border-r" style="font-weight: bold; font-size: 16px;">大潮</div>
+					<div class="cell bg-gray border-r">波</div>
+					<div class="cell">1.5メートル</div>
+				</div>
+
+				<div class="cell bg-gray border-r">時刻<br>潮位</div>
+				<div class="bottom-row-content bg-white">
+					<div class="tide-item">
+						<div class="tide-type"><span class="icon-low">↘</span>干潮</div>
+						<div class="tide-time">00:26</div>
+						<div class="tide-badge badge-low">99cm</div>
+					</div>
+
+					<div class="tide-item">
+						<div class="tide-type"><span class="icon-high">↗</span>満潮</div>
+						<div class="tide-time">5:45</div>
+						<div class="tide-badge badge-high">166cm</div>
+					</div>
+
+					<div class="tide-item">
+						<div class="tide-type"><span class="icon-low">↘</span>干潮</div>
+						<div class="tide-time">12:41</div>
+						<div class="tide-badge badge-low">16cm</div>
+					</div>
+
+					<div class="tide-item">
+						<div class="tide-type"><span class="icon-high">↗</span>満潮</div>
+						<div class="tide-time">19:36</div>
+						<div class="tide-badge badge-high">168cm</div>
+					</div>
+
+			  </div>
+			</div>
+
+			<h3>2.2 黒潮の状況</h3>
+			<h4>2.2.1 潮岬周辺（07 月 01 日夕刻発表）</h4>
+			<h3>2.2 潮岬周辺の黒潮の状況（07 月 01 日夕刻発表）</h3>
+			<figure>
+				<img src="kuroshio/2026070101.webp" width="60%">
+			</figure>
+
+			<h4>2.3.2 四国から関東にかけて（07 月 01 日夕刻発表）</h4>
+			<figure>
+				<img src="kuroshio/2026070102.webp" width="60%">
+			</figure>
+
+			<h3>2.3 天気</h3>
+			<table class="weather">
+			<tbody>
+				<tr>
+					<td rowspan="2" class="icon-cell">
+					    <img src="https://s.yimg.jp/images/weather/general/next/size150/300_day.png" width="128" height="68" alt="曇一時雨">
+					</td>
+					<td><b>雨</b></td>
+				</tr>
+				<tr>
+					<td><b><span class="red">24℃ </span></b> <span class="gray">|</span> <b><span class="blue">21℃</span></b></td>
+				</tr>
+				<tr>
+					<td colspan="2">日の出：04:50<span class="gray"> / </span>日の入り：19:10</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="slider-wrapper"
+					data-auto-play="false"
+					data-duration="6.0"
+					data-show="1"
+					data-step="1"
+					data-loop="true"
+					data-fit="contain"
+					data-aspect-ratio="600/581"
+					data-max-width="512px"
+					data-bg="#000">
+				<button class="slider-btn fs-btn">⛶</button>
+				<button class="slider-btn close-btn" style="display: none;">×</button>
+				<button class="slider-btn prev">＜</button>
+				<div class="slider-container">
+					<div class="slide-item"><img src="weathermap/2026070112.webp" alt-"A"></div>
+					<div class="slide-item"><img src="weathermap/2026070109.webp" alt-"A"></div>
+					<div class="slide-item"><img src="weathermap/2026070106.webp" alt-"A"></div>
+					<div class="slide-item"><img src="weathermap/2026070103.webp" alt-"A"></div>
+				</div>
+				<button class="slider-btn next">＞</button>
+				<div class="status-icon" style="display: none;"></div>
+			</div>
+
+			<table class="time-series">
+			<tbody>
+				<tr><th>時間</th><td>0時</td><td>3時</td><td>6時</td><td>9時</td><td>12時</td><td>15時</td><td>18時</td><td>21時</td></tr>
+				<tr>
+					<th>天気</th>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/30_night.png" width="56" height="56"></td>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/41_night.png" width="56" height="56"></td>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/51_day.png" width="56" height="56"></td>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/51_day.png" width="56" height="56"></td>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/51_day.png" width="56" height="56"></td>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/41_day.png" width="56" height="56"></td>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/41_night.png" width="56" height="56"></td>
+					<td><img src="https://s.yimg.jp/images/weather/general/next/pinpoint/size80/51_night.png" width="56" height="56"></td>
+				</tr>
+				<tr>
+					<th>気温</th>
+					<td>24℃</td>
+					<td>23℃</td>
+					<td>23℃</td>
+					<td>23℃</td>
+					<td>23℃</td>
+					<td>22℃</td>
+					<td>22℃</td>
+					<td>22℃</td>
+				</tr>
+				<tr>
+					<th>湿度</th>
+					<td>90%</td>
+					<td>91%</td>
+					<td>91%</td>
+					<td>90%</td>
+					<td>92%</td>
+					<td>94%</td>
+					<td>94%</td>
+					<td>96%</td>
+				</tr>
+				<tr>
+					<th>降水量</th>
+					<td>0mm</td>
+					<td>1mm</td>
+					<td>8mm</td>
+					<td>13mm</td>
+					<td>5mm</td>
+					<td>2mm</td>
+					<td>2mm</td>
+					<td>6mm</td>
+				</tr>
+				<tr>
+					<th>風</th>
+					<td><img src="wind/wsw.png" widht="16" height="16"><br>西南西<br>1ms</td>
+					<td><img src="wind/wnw.png" widht="16" height="16"><br>西北西<br>2ms</td>
+					<td><img src="wind/nne.png" widht="16" height="16"><br>北北東<br>1ms</td>
+					<td><img src="wind/ne.png" widht="16" height="16"><br>北東<br>3ms</td>
+					<td><img src="wind/n3.png" widht="16" height="16"><br>北東<br>3ms</td>
+					<td><img src="wind/ene.png" widht="16" height="16"><br>東北東<br>3ms</td>
+					<td><img src="wind/ene.png" widht="16" height="16"><br>東北東<br>3ms</td>
+					<td><img src="wind/e.png" widht="16" height="16"><br>東<br>3ms</td>
+				</tr>
+			</tbody>
+			</table>
+			-->
+
+		</div>
+
+		<div id="tab3" class="tab-item">
+			<h2>3 串本町へのアクセス</h2>
+			<h3>3.1 マップ</h3>
+			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212906.2208843209!2d135.59606864647031!3d33.51022978692022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60063a87c7b7906d%3A0x5c43c55ae70458ed!2z5ZKM5q2M5bGx55yM5p2x54mf5amB6YOh5Liy5pys55S6!5e0!3m2!1sja!2sjp!4v1782437744646!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+			<h3>3.2 公共交通機関</h3>
+			<h4>3.2.1 大阪方面から</h4>
+			<ul class="nomark">
+			<li>京都、新大阪、天王寺からJRきのくに線にて串本駅下車。</li>
+			</ul>
+
+			<h4>3.2.2 名古屋方面から</h4>
+			<ul class="nomark">
+			<li>名古屋駅からJR紀勢本線にて紀伊勝浦駅へ、紀伊勝浦駅で乗り換えて串本駅下車。</li>
+			<li>名古屋から新幹線で新大阪へ、新大阪からJRきのくに線にて串本駅下車。</li>
+			</ul>
+
+			<h3>3.3 乗用車</h3>
+			<h4>3.3.1 大阪方面から</h4>
+			<ul class="nomark">
+			<li>大阪から近畿自動車道・阪和自動車道・紀勢自動車道ですさみ南ICへ。</li>
+			<li>すさみ南ICから国道42号線で串本町へ。</li>
+			</ul>
+
+			<h4>3.3.2 名古屋方面から</h4>
+			<ul class="nomark">
+			<li>名古屋から東名阪自動車道・伊勢自動車道・紀勢自動車道・尾鷲熊野道路を利用。</li>
+			<li>熊野市大泊ICから国道42号を南下し串本町へ。</li>
+			</ul>
+
+		</div>
+
+		<div id="tab4" class="tab-item">
+			<h2>4 串本町内の移動手段</h2>
+			<p>串本町内は自由に移動しようと思うと乗用車が必須です。大阪や名古屋のような都心部と異なり、公共交通機関はお世辞にも便利とはいえません。車による来串をお勧めしますが、事情により車での来訪が難しい場合、便利とは言い難いものの以下の代替交通機関があります。</p>
+
+			<h3>4.1 レンタカー</h3>
+			<ul>
+			<li><a href="https://rent.toyota.co.jp/rakuraku/step1.aspx" target="_blank" rel="noopener noreferrer">トヨタレンタカー 串本駅前店</a></li>
+			<li><a href="https://www.ekiren.co.jp/office/detail/H03009" target="_blank" rel="noopener noreferrer">ＪＲ駅レンタカー 串本駅営業所</a></li>
+			<li><a href="https://rentacar.carlifestadium.com/shop/index/?office_id=0455&utm_medium=MEO_google&utm_campaign=0455&utm_source=rentacar_MEO" target="_blank" rel="noopener noreferrer">カースタレンタカー 串本桟橋店</a></li>
+			</ul>
+
+			<h3>4.2 タクシー</h3>
+			<ul>
+			<li><a href="https://www.kushimoto-taxi.co.jp/" target="_blank" rel="noopener noreferrer">串本タクシー / 大島タクシー</a></li>
+			<li>古座川タクシー（古座駅前）<br>Tel: 0735-72-0369</li>
+			</ul>
+
+			<h3>4.3 レンタサイクル</h3>
+			<ul>
+			<li><a href="https://kankou-kushimoto.jp/information/traffic/rental-bicycle" target="_blank" rel="noopener noreferrer">串本街中チョイのりサイクリング（南紀串本観光協会直営）</a></li>
+			<li><a href="https://mercure-wakayamakushimoto-resortandspa.jp/plan/bicycle-rental/" target="_blank" rel="noopener noreferrer">メルキュール和歌山串本リゾート＆スパ（宿泊客のみ）</a></li>
+			</ul>
+
+			<h3>4.4 串本町営コミュニティバス</h3>
+			<p>コミュニティバスは数少ない現地の公共の足です。各集落のご高齢の方たちの大事な足です。マナーだけはしっかりと守っていただけるようお願いします。</p>
+			<p><a href="https://www.town.kushimoto.wakayama.jp/kurashi/community-bus/" target="_blank" rel="noopener noreferrer">串本町営コミュニティバス</a></p>
+			<ul class="nomark">
+			<li>料金は ¥200-</li>
+			<li>以下の人は ¥100-
+				<ul class="nomark">
+				<li>障害者手帳(身体障害者手帳、精神障害者保健福祉手帳、療育手帳)の提示がある方</li>
+				<li>介護保険の要介護・要支援・事業対象者の認定を受けた方、またはその方に付添い同乗される方</li>
+				<li>75歳以上の方</li>
+				</ul>
+				<p class="no-indent">注)割引を受けようとする場合は必ず身体障害者手帳等、介護保険被保険者証または後期高齢者医療被保険者証（資格確認書）の提示が必要です。提示がない場合は割引は適用されません。</p>
+			</li>
+			</ul>
+			<ul>
+			<li><a href="https://www.town.kushimoto.wakayama.jp/kurashi/community-bus/files/zikokuhyo_wabuka_202404.pdf" target="_blank" rel="noopener noreferrer">和深線時刻表(PDF)</a></li>
+			<li><a href="https://www.town.kushimoto.wakayama.jp/kurashi/community-bus/files/zikokuhyo_sionomisaki-izumo_202404.pdf" target="_blank" rel="noopener noreferrer">潮岬・出雲線(PDF)</a></li>
+			</ul>
+			<p>各ダイビングサービスの最寄りバス停は "ダイビングサービス" のタブをお読みください。</p>
+		</div>
+
+		<div id="tab5" class="tab-item">
+			<h2>5 ダイビングサービスリスト</h2>
+			<p>一部のサービスを除き串本駅からの送迎を対応していますが、繁忙期は除きます。単に人手が足りないからという理由です。<br>繁忙期はゲスト対応、ボートの出港で非常に忙しく、送迎は難しい場合があります。</p>
+			<p>なのでコミュニティバスの最寄りバス停を掲載しておきます。</p>
+			<p>コミュニティバスの時刻表と、各サービスの集合時間を突き合わせて、余裕のある行動をお願いします。</p>
+
+			<table class="services">
+			<thead>
+			<tr>
+			<th>路線名</th><th>バス停</th><th>サービス名</th><th>備考</th></tr>
+			</thead>
+			<tbody>
+			<tr><td>和深線<br>大島線<br>潮岬・出雲線</td><td><ruby>串本桟橋前<rt>くしもとさんばしまえ</rt></ruby></td><td><a href="https://murakamisuigun.jp/" target="_blank" rel="noopener noreferrer">村上水軍</a></td><td>下段と同一サービス。こちらのバス停のほうが少し遠い。串本駅から徒歩 20 分と歩けない距離ではない。</td></tr>
+			<tr><td>和深線</td><td><ruby>上浦<rt>かみうら</rt></ruby></td><td><a href="https://murakamisuigun.jp/" target="_blank" rel="noopener noreferrer">村上水軍</a></td><td>上段と同一サービス。こちらのバス停のほうが近い。串本駅から徒歩 20 分と歩けない距離ではない。</td></tr>
+			<tr><td>和深線</td><td><ruby>袋<rt>ふくろ</rt></ruby></td><td><a href="https://nankiseamansclub.com/" target="_blank" rel="noopener noreferrer">南紀シーマンズクラブ</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://aquavista-kushimoto.com/" target="_blank" rel="noopener noreferrer">AQUA VISTA</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://ark-kushimoto.com/" target="_blank" rel="noopener noreferrer">ARK Diving Shop</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://kushimotodivingcenter.com/" target="_blank" rel="noopener noreferrer">串本ダイビングセンター</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://www.kmcscuba1977.com/" target="_blank" rel="noopener noreferrer">串本マリンセンター</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://dive-kooza.com/" target="_blank" rel="noopener noreferrer">DIVE KOOZA</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://kushimoto.com/" target="_blank" rel="noopener noreferrer">ダイブステーション</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://www.divezest.com/" target="_blank" rel="noopener noreferrer">ダイブゼスト</a></td><td>スクーバ休止中 / スキンダイビングのみ</td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://bubble-ring-divers.com/" target="_blank" rel="noopener noreferrer">バブルリングダイバーズ</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://www.pole-pole.wakayama.jp/" target="_blank" rel="noopener noreferrer">pole pole＠sea</a></td><td></td></tr>
+			<tr><td>和深線</td><td>袋</td><td><a href="https://kushimoto.marinestage.com/" target="_blank" rel="noopener noreferrer">マリンステージ串本店</a></td><td></td></tr>
+			<tr><td>和深線</td><td><ruby>向袋<rt>むかいぶくろ</rt></ruby></td><td><a href="https://ai-shop-diving.jp/index.html" target="_blank" rel="noopener noreferrer" style="font-size:1.08em;font-weight:402;">Ai Shop（アイショップ）</a></td><td></td></tr>
+			<tr><td>和深線</td><td>海中公園センター</td><td><a href="https://www.kushimotodp.com/" target="_blank" rel="noopener noreferrer">串本ダイビングパーク</a></td><td></td></tr>
+			<tr><td>和深線</td><td><ruby>高富<rt>たかとみ</rt></ruby></td><td><a href="http://www.coralqueen.co.jp/index.html" target="_blank" rel="noopener noreferrer">コーラルクイーン</a></td><td>バス停遠い</td></tr>
+			<tr><td>和深線</td><td>高富</td><td>シートピア串本</td><td>Tel: 0735-62-5432、バス停遠い</td></tr>
+			<tr><td>和深線</td><td><ruby>東目<rt>あずまめ</rt></ruby></td><td><a href="https://orange-h.net/" target="_blank" rel="noopener noreferrer">オレンジハウス</a></td><td></td></tr>
+			<tr><td>和深線</td><td>東目</td><td><a href="https://www.akasyachi.com/" target="_blank" rel="noopener noreferrer">赤鯱ダイビングショップ</a></td><td></td></tr>
+			<tr><td>和深線</td><td><ruby>有田<rt>ありた</rt></ruby></td><td><a href="http://center-well.com/" target="_blank" rel="noopener noreferrer">センターウェル</a></td><td>バス停遠い</td></tr>
+			<tr><td>和深線</td><td><ruby>田並<rt>たなみ</rt></ruby></td><td><a href="https://goldenanchors.jimdofree.com/kushimoto/" target="_blank" rel="noopener noreferrer">AQUIA MEISTER KUSHIMOTO</a></td><td></td></tr>
+			<tr><td>和深線</td><td><ruby>田子の浦<rt>たこのうら</rt></ruby></td><td><a href="https://www.wakayama-diving.jp/" target="_blank" rel="noopener noreferrer">双島マリンクラブ</a></td><td></td></tr>
+			<tr><td>和深線</td><td><ruby>安指<rt>あざし</rt></ruby> (？)</td><td><a href="https://www.eonet.ne.jp/~osanpo-club/" target="_blank" rel="noopener noreferrer">水中お散歩クラブ</a></td><td>最寄りバス停は要確認</td></tr>
+			<tr><td>潮岬・出雲線</td><td>潮岬灯台前</td><td><a href="https://akamatsu-divers.wixsite.com/akamatsudivers" target="_blank" rel="noopener noreferrer">Akamatsu Diver's</a></td><td></td></tr>
+			</tbody>
+			</table>
+		</div>
+		<div id="tab6" class="tab-item">
+			<h2>5 食事</h2>
+			<dl>
+			<dt>一刀庵</dt>
+			<dt>レストランサンドリア</dt>
+			<dt>紀州園</dt>
+			<dt>大阪王将</dt>
+			</dl>
+		</div>
+		<div id="tab7" class="tab-item">
+			<h2>6 買い物</h2>
+			<h3>6.1 串本駅周辺</h3>
+			<dl>
+			<dt>オークワ串本店</dt>
+			<dt>エバーグリーン串本店</dt>
+			<dt>ダイソーオークワ串本店</dt>
+			<dt>ファミリーマート串本駅前店</dt>
+			</dl>
+
+			<h3>6.2 スーパー</h3>
+			<dl>
+			<dt>Aコープ VASEO</dt>
+			</dl>
+
+			<h3>6.3 コンビニ</h3>
+			<dl>
+			<dt>ローソン串本町串本店</dt>
+			<dt>ファミリーマート串本町桟橋店</dt>
+			<dt>ローソン串本町高富店</dt>
+			</dl>
+
+			<h3>6.4 ドラッグストア</h3>
+
+		</div>
+		<div id="tab8" class="tab-item">
+			<h2>7 観光</h2>
+		</div>
+	</div>
+	<hr class="clear">
+</article>
+<footer>
+    <p class="center">&copy; 2026 Author Mitsugu Oyama (a.k.a. OrzBruford, miyamafukashi or OrzDiver)&nbsp;&nbsp;&nbsp;&nbsp;<img src="20260504155449917.webp" width="64"></p>
+</footer>
+</body>
+
+</html>
+<!--
+vim: ts=2 sw=2 noet
+-->
+
